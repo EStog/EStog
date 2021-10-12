@@ -14,10 +14,8 @@ jobs:
         with:
           # Your GitHub token
           token: ${{ secrets.METRICS_TOKEN }}
-          use_prebuilt_image: yes
-          base: header, activity, repositories, metadata
-          plugin_gists: yes
+          base: header
           plugin_languages: yes
-          plugin_languages_limit: 50
+          plugin_languages_limit: 0
           plugin_languages_categories: data, markup, programming, prose
-          config_order: base.header, gists, languages
+          config_order: base.header, languages
