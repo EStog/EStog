@@ -1,0 +1,24 @@
+name: Metrics
+on:
+  # Schedule updates (each hour)
+  schedule: [{cron: "0 * * * *"}]
+  # Lines below let you run workflow manually and on each commit (optional)
+  workflow_dispatch:
+  push: {branches: ["main"]}
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      # See action.yml for all options
+      - uses: EStog/metrics@latest
+        with:
+          # Your GitHub token
+          token: ${{ secrets.METRICS_TOKEN }}
+          use_prebuilt_image: yes
+          base: header, activity, repositories, metadata
+          repositories_forks: yes
+          plugin_gists: yes
+          plugin_languages: yes
+          plugin_languages_limit: 10
+          plugin_languages_indepth: true
+          plugin_languages_categories: data, markup, programming, prose
