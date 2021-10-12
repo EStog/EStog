@@ -1386,7 +1386,7 @@
             </section>
             <section class="column">
                 <h3 class="field">
-        Most used languages
+        Languages by use amount
       </h3>
                 <svg class="bar" xmlns="http://www.w3.org/2000/svg" width="460" height="8">
                     <mask id="languages-bar">
