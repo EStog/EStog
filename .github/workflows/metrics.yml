@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # See action.yml for all options
-      - uses: EStog/metrics@latest
+      - uses: EStog/metrics@main
         with:
           # Your GitHub token
           token: ${{ secrets.METRICS_TOKEN }}
